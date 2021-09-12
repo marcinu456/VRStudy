@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\GitKraken\\ArchitectureExplorer\\Source\\ArchitectureExplorer\\ArchitectureExplorer.Build.cs",
+		"D:\\GitKraken\\ArchitectureExplorer\\Source\\ArchitectureExplorer.Target.cs",
+		"D:\\GitKraken\\ArchitectureExplorer\\Source\\ArchitectureExplorerEditor.Target.cs"
+	],
+	"EngineVersion": "4.27.0"
+}

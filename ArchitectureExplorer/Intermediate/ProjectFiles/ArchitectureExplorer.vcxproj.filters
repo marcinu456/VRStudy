@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\ArchitectureExplorer.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{AE39C4E5-E2CC-4B1D-936C-00FEEA4E02C7}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\ArchitectureExplorer.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\ArchitectureExplorerEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{DE4E5852-428C-4299-964F-7B968644AE65}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\ArchitectureExplorer">
+      <UniqueIdentifier>{11F5D444-4E26-47AE-A49F-A1CB031EAFF3}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\ArchitectureExplorer\ArchitectureExplorer.Build.cs">
+      <Filter>Source\ArchitectureExplorer</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\ArchitectureExplorer\ArchitectureExplorer.cpp">
+      <Filter>Source\ArchitectureExplorer</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ArchitectureExplorer\ArchitectureExplorer.h">
+      <Filter>Source\ArchitectureExplorer</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ArchitectureExplorer\ArchitectureExplorerGameModeBase.cpp">
+      <Filter>Source\ArchitectureExplorer</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ArchitectureExplorer\ArchitectureExplorerGameModeBase.h">
+      <Filter>Source\ArchitectureExplorer</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
