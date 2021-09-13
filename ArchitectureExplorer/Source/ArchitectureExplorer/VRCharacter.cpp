@@ -48,4 +48,3 @@ void AVRCharacter::MoveRight(float throttle)
 {
 	AddMovementInput(throttle * Camera->GetRightVector());
 }
-
