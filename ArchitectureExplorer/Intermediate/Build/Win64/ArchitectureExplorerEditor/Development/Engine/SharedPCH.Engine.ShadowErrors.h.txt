@@ -1,4 +1,4 @@
-D:/GitKraken/ArchitectureExplorer/Intermediate/Build/Win64/ArchitectureExplorerEditor/Development/Engine/SharedPCH.Engine.ShadowErrors.h
+D:/GitKraken/VRStudy/ArchitectureExplorer/Intermediate/Build/Win64/ArchitectureExplorerEditor/Development/Engine/SharedPCH.Engine.ShadowErrors.h
 D:/Program Files/Epic Games/UE_4.27/Engine/Source/Runtime/Engine/Public/EngineSharedPCH.h
 D:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\Containers/ContainersFwd.h
 D:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Core\Public\CoreTypes.h

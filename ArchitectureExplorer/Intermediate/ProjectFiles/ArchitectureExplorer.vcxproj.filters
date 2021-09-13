@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\ArchitectureExplorer.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{AE39C4E5-E2CC-4B1D-936C-00FEEA4E02C7}</UniqueIdentifier>
+      <UniqueIdentifier>{80600653-FDED-497E-8A08-96D599400F7C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ArchitectureExplorer.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{DE4E5852-428C-4299-964F-7B968644AE65}</UniqueIdentifier>
+      <UniqueIdentifier>{4E73523F-9AEC-4E6E-9008-9EE4B43BDDA3}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -24,7 +24,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\ArchitectureExplorer">
-      <UniqueIdentifier>{11F5D444-4E26-47AE-A49F-A1CB031EAFF3}</UniqueIdentifier>
+      <UniqueIdentifier>{D57532B3-8708-416D-A6A7-1D1F97BB85FF}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ArchitectureExplorer\ArchitectureExplorer.Build.cs">
       <Filter>Source\ArchitectureExplorer</Filter>
@@ -39,6 +39,12 @@
       <Filter>Source\ArchitectureExplorer</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\ArchitectureExplorer\ArchitectureExplorerGameModeBase.h">
+      <Filter>Source\ArchitectureExplorer</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\ArchitectureExplorer\VRCharacter.cpp">
+      <Filter>Source\ArchitectureExplorer</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\ArchitectureExplorer\VRCharacter.h">
       <Filter>Source\ArchitectureExplorer</Filter>
     </ClInclude>
   </ItemGroup>
