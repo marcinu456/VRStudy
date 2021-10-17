@@ -16,6 +16,10 @@ AVRCharacter::AVRCharacter()
 
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
 	Camera->SetupAttachment(VRRoot);
+
+	DestinationMarker = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("DestinationMarker"));
+	DestinationMarker->SetupAttachment(GetRootComponent());
+
 }
 
 // Called when the game starts or when spawned
@@ -34,6 +38,8 @@ void AVRCharacter::Tick(float DeltaTime)
 	NewCameraOffset.Z = 0;
 	AddActorWorldOffset(NewCameraOffset);
 	VRRoot->AddWorldOffset(-NewCameraOffset);
+
+	UpdateDestinationMarker();
 }
 
 // Called to bind functionality to input
@@ -43,6 +49,20 @@ void AVRCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 	PlayerInputComponent->BindAxis(TEXT("Forward"),this, &AVRCharacter::MoveForward);
 	PlayerInputComponent->BindAxis(TEXT("Right"),this, &AVRCharacter::MoveRight);
+}
+
+void AVRCharacter::UpdateDestinationMarker()
+{
+	FHitResult HitResult;
+	FVector Start = Camera->GetComponentLocation();
+	FVector End = Start + Camera->GetForwardVector()* MaxTeleportDistance;
+	bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, Start, End, ECC_Visibility);
+
+	if(bHit)
+	{
+		DestinationMarker->SetWorldLocation(HitResult.Location);
+	}
+
 }
 
 void AVRCharacter::MoveForward(float throttle)
