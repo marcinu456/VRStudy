@@ -1747,3 +1747,231 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2021.10.18-20.11.01:144][518]LogPlayLevel: Display: Destroying online subsystem :Context_13
 [2021.10.18-20.11.01:149][518]LogEngine: Changing dynamic resolution state.
 [2021.10.18-20.11.11:715][633]LogUObjectHash: Compacting FUObjectHashTables data took   2.74ms
+[2021.10.18-20.12.34:827][273]BlueprintLog: New page: Compile BP_VRCharacter
+[2021.10.18-20.12.34:878][273]LogUObjectHash: Compacting FUObjectHashTables data took   3.06ms
+[2021.10.18-20.12.34:921][273]LogSlate: Took 0.007572 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/DroidSansMono.ttf' (77K)
+[2021.10.18-20.12.35:536][330]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/BP_VRCharacter" FILE="../../../../../../GitKraken/VRStudy/ArchitectureExplorer/Content/BP_VRCharacter.uasset" SILENT=true
+[2021.10.18-20.12.35:544][330]LogSavePackage: Moving '../../../../../../GitKraken/VRStudy/ArchitectureExplorer/Saved/BP_VRCharacter9D245D0D4B8FECFD14C35296A48D7129.tmp' to '../../../../../../GitKraken/VRStudy/ArchitectureExplorer/Content/BP_VRCharacter.uasset'
+[2021.10.18-20.12.35:560][330]AssetCheck: New page: Asset Save: BP_VRCharacter
+[2021.10.18-20.12.35:560][330]LogContentValidation: Display: Validating Blueprint /Game/BP_VRCharacter.BP_VRCharacter
+[2021.10.18-20.14.11:658][681]LogAssetEditorSubsystem: Opening Asset editor for Material /Game/VRTemplate/Materials/M_TeleportPreviews.M_TeleportPreviews
+[2021.10.18-20.14.11:663][681]LogMaterial: Display: Missing cached shadermap for M_TeleportPreviews in PCD3D_SM5, Default, SM5 (DDC key hash: F253C22EACD1A7009AC89F740D523FC97D131535), compiling. 
+[2021.10.18-20.14.11:706][681]LogShaderCompilers: Display: Submitted 15 shader compile jobs with 'Normal' priority
+[2021.10.18-20.14.11:740][681]LogTexture: Default maximum texture size for cubemaps generated from long-lat sources has been changed from 512 to unlimited. In order to preserve old behaiour for '/Engine/EditorMaterials/AssetViewer/EpicQuadPanorama_CC+EV1.EpicQuadPanorama_CC+EV1', its maximum texture size has been explicitly set to 512.
+[2021.10.18-20.14.11:835][681]LogTexture: Default maximum texture size for cubemaps generated from long-lat sources has been changed from 512 to unlimited. In order to preserve old behaiour for '/Engine/MapTemplates/Sky/SunsetAmbientCubemap.SunsetAmbientCubemap', its maximum texture size has been explicitly set to 512.
+[2021.10.18-20.14.11:969][681]LogMaterial: Display: Missing cached shadermap for M_TeleportPreviews in PCD3D_SM5, Default, SM5 (DDC key hash: 13FCFD1A324495F0F881FF5ABB17C03D9F9445FD), compiling. 
+[2021.10.18-20.14.11:976][681]LogMaterial: Display: Missing cached shadermap for M_TeleportPreviews in PCD3D_SM5, Default, SM5 (DDC key hash: 68323F4F39E56A40D24C055432FAD1628883FDC8), compiling. 
+[2021.10.18-20.14.11:978][681]LogMaterial: Display: Missing cached shadermap for FMatExpressionPreview MaterialExpressionTextureSample_1 in PCD3D_SM5, Default, SM5 (DDC key hash: 917655C551858C3D2638391F4C483818C7F2EFFE), compiling. 
+[2021.10.18-20.14.11:979][681]LogMaterial: Display: Missing cached shadermap for FMatExpressionPreview MaterialExpressionCollectionParameter_4 in PCD3D_SM5, Default, SM5 (DDC key hash: A28EAC3BA16383E761C33AD2089938FC9FDBB566), compiling. 
+[2021.10.18-20.14.12:005][681]LogAssetEditorSubsystem: Opening Asset editor for Material /Game/VRTemplate/Materials/Pinke_Pie_Mat.Pinke_Pie_Mat
+[2021.10.18-20.14.12:006][681]LogMaterial: Display: Missing cached shadermap for Pinke_Pie_Mat in PCD3D_SM5, Default, SM5 (DDC key hash: CEB4A82C524BD5C7024971EB93B808C94F41EB60), compiling. 
+[2021.10.18-20.14.12:023][681]LogShaderCompilers: Display: Submitted 10 shader compile jobs with 'Normal' priority
+[2021.10.18-20.14.12:060][681]LogMaterial: Display: Missing cached shadermap for Pinke_Pie_Mat in PCD3D_SM5, Default, SM5 (DDC key hash: A7C003FBC22FD6DA5771B02141F00F01E3B7AF89), compiling. 
+[2021.10.18-20.14.12:062][681]LogMaterial: Display: Missing cached shadermap for Pinke_Pie_Mat in PCD3D_SM5, Default, SM5 (DDC key hash: B2FE59A6C8382EDF4BBEBDA9468AC0B0AD8C8554), compiling. 
+[2021.10.18-20.14.12:063][681]LogMaterial: Display: Missing cached shadermap for FMatExpressionPreview MaterialExpressionTextureSample_0 in PCD3D_SM5, Default, SM5 (DDC key hash: D6F0F29B63780FC27EE51FEF37F04EA92A11AB3E), compiling. 
+[2021.10.18-20.14.12:073][681]MaterialEditorStats: Texture samplers: 0/16
+[2021.10.18-20.14.12:073][681]MaterialEditorStats: Texture Lookups (Est.): VS(0), PS(2)
+[2021.10.18-20.14.12:073][681]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2021.10.18-20.14.12:073][681]MaterialEditorStats: Texture samplers: 0/16
+[2021.10.18-20.14.12:073][681]MaterialEditorStats: Texture Lookups (Est.): VS(0), PS(1)
+[2021.10.18-20.14.12:073][681]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2021.10.18-20.14.12:158][682]LogShaderCompilers: Display: Submitted 2 shader compile jobs with 'ForceLocal' priority
+[2021.10.18-20.14.12:158][682]LogShaderCompilers: Display: Worker (1/13): shaders left to compile 2
+[2021.10.18-20.14.12:158][682]LogShaderCompilers: Display: Worker (2/13): shaders left to compile 1
+[2021.10.18-20.14.12:158][682]LogShaderCompilers: Display: Started 2 'Local' shader compile jobs with 'ForceLocal' priority
+[2021.10.18-20.14.12:158][682]LogShaderCompilers: Display: Submitted 8 shader compile jobs with 'Normal' priority
+[2021.10.18-20.14.12:207][683]LogShaderCompilers: Display: Worker (3/13): shaders left to compile 8
+[2021.10.18-20.14.12:207][683]LogShaderCompilers: Display: Worker (4/13): shaders left to compile 7
+[2021.10.18-20.14.12:207][683]LogShaderCompilers: Display: Worker (5/13): shaders left to compile 6
+[2021.10.18-20.14.12:207][683]LogShaderCompilers: Display: Worker (6/13): shaders left to compile 5
+[2021.10.18-20.14.12:207][683]LogShaderCompilers: Display: Worker (7/13): shaders left to compile 4
+[2021.10.18-20.14.12:207][683]LogShaderCompilers: Display: Worker (8/13): shaders left to compile 3
+[2021.10.18-20.14.12:207][683]LogShaderCompilers: Display: Worker (9/13): shaders left to compile 2
+[2021.10.18-20.14.12:207][683]LogShaderCompilers: Display: Worker (10/13): shaders left to compile 1
+[2021.10.18-20.14.12:207][683]LogShaderCompilers: Display: Started 8 'Local' shader compile jobs with 'Normal' priority
+[2021.10.18-20.14.12:207][683]LogShaderCompilers: Display: Submitted 15 shader compile jobs with 'Normal' priority
+[2021.10.18-20.14.12:207][683]LogShaderCompilers: Display: Worker (11/13): shaders left to compile 2
+[2021.10.18-20.14.12:207][683]LogShaderCompilers: Display: Worker (12/13): shaders left to compile 1
+[2021.10.18-20.14.12:207][683]LogShaderCompilers: Display: Started 2 'Local' shader compile jobs with 'ForceLocal' priority
+[2021.10.18-20.14.12:376][685]LogShaderCompilers: Display: Submitted 2 shader compile jobs with 'ForceLocal' priority
+[2021.10.18-20.14.13:565][796]LogShaderCompilers: Display: Worker (11/13): shaders left to compile 2
+[2021.10.18-20.14.13:566][796]LogShaderCompilers: Display: Started 1 'Local' shader compile jobs with 'ForceLocal' priority
+[2021.10.18-20.14.13:636][796]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2021.10.18-20.14.13:636][796]LogShaderCompilers: Display: Total job queries 52, among them cache hits 0 (0.00%)
+[2021.10.18-20.14.13:636][796]LogShaderCompilers: Display: Tracking 1 distinct input hashes that result in 1 distinct outputs (100.00%)
+[2021.10.18-20.14.13:636][796]LogShaderCompilers: Display: RAM used: 0.00 MB (0.00 GB) of 819.20 MB (0.80 GB) budget. Usage: 0.00%
+[2021.10.18-20.14.13:636][796]LogShaderCompilers: Display: ================================================
+[2021.10.18-20.14.13:739][801]LogShaderCompilers: Display: Worker (3/13): shaders left to compile 1
+[2021.10.18-20.14.13:739][801]LogShaderCompilers: Display: Started 1 'Local' shader compile jobs with 'ForceLocal' priority
+[2021.10.18-20.14.13:815][805]LogShaderCompilers: Display: Worker (9/13): shaders left to compile 13
+[2021.10.18-20.14.13:815][805]LogShaderCompilers: Display: Worker (12/13): shaders left to compile 11
+[2021.10.18-20.14.13:815][805]LogShaderCompilers: Display: Started 4 'Local' shader compile jobs with 'Normal' priority
+[2021.10.18-20.14.13:830][806]LogShaderCompilers: Display: Worker (2/13): shaders left to compile 9
+[2021.10.18-20.14.13:830][806]LogShaderCompilers: Display: Started 1 'Local' shader compile jobs with 'Normal' priority
+[2021.10.18-20.14.13:890][811]LogShaderCompilers: Display: Worker (6/13): shaders left to compile 8
+[2021.10.18-20.14.13:890][811]LogShaderCompilers: Display: Started 1 'Local' shader compile jobs with 'Normal' priority
+[2021.10.18-20.14.14:005][821]LogShaderCompilers: Display: Worker (1/13): shaders left to compile 7
+[2021.10.18-20.14.14:006][821]LogShaderCompilers: Display: Started 1 'Local' shader compile jobs with 'Normal' priority
+[2021.10.18-20.14.14:008][821]MaterialEditorStats: Texture samplers: 3/16
+[2021.10.18-20.14.14:008][821]MaterialEditorStats: Texture Lookups (Est.): VS(0), PS(1)
+[2021.10.18-20.14.14:008][821]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2021.10.18-20.14.14:085][825]LogShaderCompilers: Display: Worker (4/13): shaders left to compile 6
+[2021.10.18-20.14.14:085][825]LogShaderCompilers: Display: Started 1 'Local' shader compile jobs with 'Normal' priority
+[2021.10.18-20.14.14:115][827]LogShaderCompilers: Display: Worker (8/13): shaders left to compile 5
+[2021.10.18-20.14.14:115][827]LogShaderCompilers: Display: Worker (10/13): shaders left to compile 4
+[2021.10.18-20.14.14:115][827]LogShaderCompilers: Display: Started 2 'Local' shader compile jobs with 'Normal' priority
+[2021.10.18-20.14.14:147][829]LogShaderCompilers: Display: Worker (7/13): shaders left to compile 3
+[2021.10.18-20.14.14:147][829]LogShaderCompilers: Display: Worker (11/13): shaders left to compile 2
+[2021.10.18-20.14.14:147][829]LogShaderCompilers: Display: Started 2 'Local' shader compile jobs with 'Normal' priority
+[2021.10.18-20.14.14:164][830]LogShaderCompilers: Display: Worker (5/13): shaders left to compile 1
+[2021.10.18-20.14.14:164][830]LogShaderCompilers: Display: Started 1 'Local' shader compile jobs with 'Normal' priority
+[2021.10.18-20.14.14:271][839]LogWorld: UWorld::CleanupWorld for World_5, bSessionEnded=true, bCleanupResources=true
+[2021.10.18-20.14.14:272][839]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.10.18-20.14.14:319][839]MaterialEditorStats: Base pass shader: 120 instructions
+[2021.10.18-20.14.14:320][839]MaterialEditorStats: Base pass shader with Volumetric Lightmap: 194 instructions
+[2021.10.18-20.14.14:320][839]MaterialEditorStats: Base pass vertex shader: 46 instructions
+[2021.10.18-20.14.14:320][839]MaterialEditorStats: Texture samplers: 3/16
+[2021.10.18-20.14.14:320][839]MaterialEditorStats: Texture Lookups (Est.): VS(0), PS(1)
+[2021.10.18-20.14.14:320][839]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2021.10.18-20.14.14:652][861]LogWorld: UWorld::CleanupWorld for World_6, bSessionEnded=true, bCleanupResources=true
+[2021.10.18-20.14.14:652][861]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.10.18-20.17.01:867][ 16]LogUObjectHash: Compacting FUObjectHashTables data took   3.73ms
+[2021.10.18-20.17.01:876][ 16]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MainMap" FILE="../../../../../../GitKraken/VRStudy/ArchitectureExplorer/Saved/Autosaves/Game/MainMap_Auto1.umap" SILENT=true AUTOSAVING=true KEEPDIRTY=false
+[2021.10.18-20.17.02:092][ 16]LogSavePackage: Moving '../../../../../../GitKraken/VRStudy/ArchitectureExplorer/Saved/MainMap_Auto1E8E7D69E43E38EE1F9973898960AC5EC.tmp' to '../../../../../../GitKraken/VRStudy/ArchitectureExplorer/Saved/Autosaves/Game/MainMap_Auto1.umap'
+[2021.10.18-20.17.02:093][ 16]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/MainMap' took 0.271
+[2021.10.18-20.17.02:093][ 16]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.271
+[2021.10.18-20.17.12:604][195]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MainMap" FILE="../../../../../../GitKraken/VRStudy/ArchitectureExplorer/Content/MainMap.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2021.10.18-20.17.12:624][195]LogUObjectHash: Compacting FUObjectHashTables data took   2.81ms
+[2021.10.18-20.17.12:850][195]LogSavePackage: Moving '../../../../../../GitKraken/VRStudy/ArchitectureExplorer/Saved/MainMap8B7F110341C45449C4F644A1FC025BD5.tmp' to '../../../../../../GitKraken/VRStudy/ArchitectureExplorer/Content/MainMap.umap'
+[2021.10.18-20.17.12:858][195]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/MainMap_BuiltData" FILE="../../../../../../GitKraken/VRStudy/ArchitectureExplorer/Content/MainMap_BuiltData.uasset" SILENT=true
+[2021.10.18-20.17.13:701][195]LogSavePackage: Moving '../../../../../../GitKraken/VRStudy/ArchitectureExplorer/Saved/MainMap_BuiltDataAADD933D42A92CAA6AF68CB7C6B8194E.tmp' to '../../../../../../GitKraken/VRStudy/ArchitectureExplorer/Content/MainMap_BuiltData.uasset'
+[2021.10.18-20.17.13:737][195]AssetCheck: New page: Asset Save: multiple assets
+[2021.10.18-20.17.13:737][195]LogContentValidation: Display: Validating MapBuildDataRegistry /Game/MainMap_BuiltData.MainMap_BuiltData
+[2021.10.18-20.17.13:737][195]LogContentValidation: Display: Validating World /Game/MainMap.MainMap
+[2021.10.18-20.28.30:690][422]LogHotReload: New module detected: UE4Editor-ArchitectureExplorer-0026.dll
+[2021.10.18-20.28.31:508][449]LogHotReload: Starting Hot-Reload from IDE
+[2021.10.18-20.28.31:554][449]LogClass: Could not find existing class VRCharacter in package /Script/ArchitectureExplorer for HotReload, assuming new class
+[2021.10.18-20.28.31:570][449]LogHotReload: Re-instancing VRCharacter after hot-reload.
+[2021.10.18-20.28.31:620][449]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'ArchitectureExplorer' in 0.0003 seconds. Added 2 classes and 2 folders.
+[2021.10.18-20.28.31:626][449]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2021.10.18-20.28.31:697][449]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0098 seconds. Added 3824 classes and 930 folders.
+[2021.10.18-20.28.31:701][449]Display: HotReload took  0.2s.
+[2021.10.18-20.34.20:934][943]LogHotReload: New module detected: UE4Editor-ArchitectureExplorer-0029.dll
+[2021.10.18-20.34.21:634][966]LogHotReload: Starting Hot-Reload from IDE
+[2021.10.18-20.34.21:689][966]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'ArchitectureExplorer' in 0.0003 seconds. Added 2 classes and 2 folders.
+[2021.10.18-20.34.21:696][966]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2021.10.18-20.34.21:790][966]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0101 seconds. Added 3824 classes and 930 folders.
+[2021.10.18-20.34.21:793][966]Display: HotReload took  0.2s.
+[2021.10.18-20.37.18:191][319]LogHotReload: New module detected: UE4Editor-ArchitectureExplorer-0030.dll
+[2021.10.18-20.37.18:914][342]LogHotReload: Starting Hot-Reload from IDE
+[2021.10.18-20.37.18:970][342]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'ArchitectureExplorer' in 0.0003 seconds. Added 2 classes and 2 folders.
+[2021.10.18-20.37.18:979][342]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2021.10.18-20.37.19:093][342]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0101 seconds. Added 3824 classes and 930 folders.
+[2021.10.18-20.37.19:098][342]Display: HotReload took  0.2s.
+[2021.10.18-20.38.43:927][780]LogHotReload: New module detected: UE4Editor-ArchitectureExplorer-0031.dll
+[2021.10.18-20.38.44:627][803]LogHotReload: Starting Hot-Reload from IDE
+[2021.10.18-20.38.44:687][803]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'ArchitectureExplorer' in 0.0003 seconds. Added 2 classes and 2 folders.
+[2021.10.18-20.38.44:697][803]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2021.10.18-20.38.44:829][803]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0102 seconds. Added 3824 classes and 930 folders.
+[2021.10.18-20.38.44:834][803]Display: HotReload took  0.2s.
+[2021.10.18-20.38.57:733][599]LogHotReload: New module detected: UE4Editor-ArchitectureExplorer-0032.dll
+[2021.10.18-20.38.58:462][623]LogHotReload: Starting Hot-Reload from IDE
+[2021.10.18-20.38.58:538][623]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'ArchitectureExplorer' in 0.0003 seconds. Added 2 classes and 2 folders.
+[2021.10.18-20.38.58:550][623]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2021.10.18-20.38.58:689][623]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0093 seconds. Added 3824 classes and 930 folders.
+[2021.10.18-20.38.58:693][623]Display: HotReload took  0.2s.
+[2021.10.18-20.39.47:048][272]LogTemp: Repeating last play command: VR Preview
+[2021.10.18-20.39.47:054][272]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.10.18-20.39.47:054][272]LogHMD: Initializing OVRPlugin session
+[2021.10.18-20.39.47:177][272]LogHMD: Allocating Oculus 3776 x 1888 rendertarget swapchain
+[2021.10.18-20.39.47:178][272]PIE: New page: PIE session: MainMap (19 paź 2021, 00:39:47)
+[2021.10.18-20.39.47:178][272]LogPlayLevel: Creating play world package: /Game/UEDPIE_0_MainMap
+[2021.10.18-20.39.47:251][272]LogPlayLevel: PIE: StaticDuplicateObject took: (0.072943s)
+[2021.10.18-20.39.47:253][272]LogAIModule: Creating AISystem for world MainMap
+[2021.10.18-20.39.47:253][272]LogPlayLevel: PIE: World Init took: (0.002365s)
+[2021.10.18-20.39.47:253][272]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/MainMap.MainMap to /Game/UEDPIE_0_MainMap.MainMap (0.075502s)
+[2021.10.18-20.39.47:518][272]LogUObjectHash: Compacting FUObjectHashTables data took  10.54ms
+[2021.10.18-20.39.47:523][272]LogAudio: Display: Creating Audio Device:                 Id: 10, Scope: Unique, Realtime: True
+[2021.10.18-20.39.47:523][272]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.10.18-20.39.47:523][272]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.10.18-20.39.47:523][272]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.10.18-20.39.47:523][272]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.10.18-20.39.47:523][272]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.10.18-20.39.47:523][272]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.10.18-20.39.47:523][272]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.10.18-20.39.47:523][272]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.10.18-20.39.47:523][272]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2021.10.18-20.39.47:523][272]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2021.10.18-20.39.47:523][272]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2021.10.18-20.39.47:523][272]LogAudioMixer: Display: Initializing audio mixer.
+[2021.10.18-20.39.47:531][272]LogAudioMixer: Display: 0: FrontLeft
+[2021.10.18-20.39.47:531][272]LogAudioMixer: Display: 1: FrontRight
+[2021.10.18-20.39.47:532][272]LogAudioMixer: Display: 0: FrontLeft
+[2021.10.18-20.39.47:532][272]LogAudioMixer: Display: 1: FrontRight
+[2021.10.18-20.39.47:533][272]LogAudioMixer: Display: 0: FrontLeft
+[2021.10.18-20.39.47:533][272]LogAudioMixer: Display: 1: FrontRight
+[2021.10.18-20.39.47:534][272]LogAudioMixer: Display: 0: FrontLeft
+[2021.10.18-20.39.47:534][272]LogAudioMixer: Display: 1: FrontRight
+[2021.10.18-20.39.47:535][272]LogAudioMixer: Display: 0: FrontLeft
+[2021.10.18-20.39.47:535][272]LogAudioMixer: Display: 1: FrontRight
+[2021.10.18-20.39.47:535][272]LogAudioMixer: Display: 2: FrontCenter
+[2021.10.18-20.39.47:535][272]LogAudioMixer: Display: 3: LowFrequency
+[2021.10.18-20.39.47:535][272]LogAudioMixer: Display: 4: BackLeft
+[2021.10.18-20.39.47:535][272]LogAudioMixer: Display: 5: BackRight
+[2021.10.18-20.39.47:535][272]LogAudioMixer: Display: 6: SideLeft
+[2021.10.18-20.39.47:535][272]LogAudioMixer: Display: 7: SideRight
+[2021.10.18-20.39.47:536][272]LogAudioMixer: Display: 0: FrontLeft
+[2021.10.18-20.39.47:536][272]LogAudioMixer: Display: 1: FrontRight
+[2021.10.18-20.39.47:537][272]LogAudioMixer: Display: 0: FrontLeft
+[2021.10.18-20.39.47:537][272]LogAudioMixer: Display: 1: FrontRight
+[2021.10.18-20.39.47:538][272]LogAudioMixer: Display: 0: FrontLeft
+[2021.10.18-20.39.47:538][272]LogAudioMixer: Display: 1: FrontRight
+[2021.10.18-20.39.47:541][272]LogAudioMixer: Display: 0: FrontLeft
+[2021.10.18-20.39.47:541][272]LogAudioMixer: Display: 1: FrontRight
+[2021.10.18-20.39.47:545][272]LogAudioMixer: Display: Using Audio Device Słuchawki (Oculus Virtual Audio Device)
+[2021.10.18-20.39.47:546][272]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.10.18-20.39.47:546][272]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.10.18-20.39.47:546][272]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.10.18-20.39.47:546][272]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.10.18-20.39.47:546][272]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2021.10.18-20.39.47:546][272]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2021.10.18-20.39.47:547][272]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2021.10.18-20.39.47:547][272]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2021.10.18-20.39.47:547][272]LogInit: FAudioDevice initialized.
+[2021.10.18-20.39.47:547][272]LogAudio: Display: Audio Device (ID: 10) registered with world 'MainMap'.
+[2021.10.18-20.39.47:559][272]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.10.18-20.39.47:566][272]LogHMD: Allocating Oculus 4128 x 2272 rendertarget swapchain
+[2021.10.18-20.39.47:602][272]LogLoad: Game class is 'BP_VRGameModeBase_C'
+[2021.10.18-20.39.47:616][272]LogWorld: Bringing World /Game/UEDPIE_0_MainMap.MainMap up for play (max tick rate 0) at 2021.10.18-22.39.47
+[2021.10.18-20.39.47:617][272]LogWorld: Bringing up level for play took: 0.013391
+[2021.10.18-20.39.47:617][272]LogOnline: OSS: Creating online subsystem instance for: :Context_21
+[2021.10.18-20.39.47:624][272]PIE: Server logged in
+[2021.10.18-20.39.47:625][272]PIE: Play in editor total start time 0,572 seconds.
+[2021.10.18-20.39.47:627][272]LogEngine: Changing dynamic resolution state.
+[2021.10.18-20.39.47:668][272]LogHMD: Allocating Oculus 4128 x 2272 depth rendertarget swapchain
+[2021.10.18-20.39.47:697][273]LogCharacterMovement: Warning: GetSimulationTimeStep() - Max iterations 8 hit while remaining time 0.080403 > MaxSimulationTimeStep (0.050) for 'BP_VRCharacter_C_0', movement 'Walking'
+[2021.10.18-20.40.07:789][428]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.10.18-20.40.07:789][428]LogWorld: BeginTearingDown for /Game/UEDPIE_0_MainMap
+[2021.10.18-20.40.07:815][428]LogSlate: Window 'ArchitectureExplorer Preview [NetMode: Standalone]  (64-bit/Windows) OculusHMD' being destroyed
+[2021.10.18-20.40.07:857][428]LogWorld: UWorld::CleanupWorld for MainMap, bSessionEnded=true, bCleanupResources=true
+[2021.10.18-20.40.07:859][428]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.10.18-20.40.07:865][428]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2021.10.18-20.40.07:886][428]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.10.18-20.40.07:930][428]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2021.10.18-20.40.07:934][428]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2021.10.18-20.40.07:935][428]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2021.10.18-20.40.08:021][428]LogUObjectHash: Compacting FUObjectHashTables data took   5.79ms
+[2021.10.18-20.40.08:044][429]LogPlayLevel: Display: Destroying online subsystem :Context_21
+[2021.10.18-20.40.08:077][429]LogEngine: Changing dynamic resolution state.
+[2021.10.18-20.47.03:513][722]LogHotReload: New module detected: UE4Editor-ArchitectureExplorer-0033.dll
+[2021.10.18-20.47.04:213][725]LogHotReload: Starting Hot-Reload from IDE
+[2021.10.18-20.47.04:270][725]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'ArchitectureExplorer' in 0.0003 seconds. Added 2 classes and 2 folders.
+[2021.10.18-20.47.04:277][725]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2021.10.18-20.47.04:350][725]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0099 seconds. Added 3824 classes and 930 folders.
+[2021.10.18-20.47.04:353][725]Display: HotReload took  0.1s.
+[2021.10.18-20.49.28:421][133]LogHotReload: New module detected: UE4Editor-ArchitectureExplorer-0034.dll
+[2021.10.18-20.49.29:133][136]LogHotReload: Starting Hot-Reload from IDE
+[2021.10.18-20.49.29:187][136]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'ArchitectureExplorer' in 0.0003 seconds. Added 2 classes and 2 folders.
+[2021.10.18-20.49.29:195][136]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2021.10.18-20.49.29:281][136]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0132 seconds. Added 3824 classes and 930 folders.
+[2021.10.18-20.49.29:286][136]Display: HotReload took  0.2s.

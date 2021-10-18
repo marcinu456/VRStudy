@@ -5,6 +5,7 @@
 #include "UObject/Object.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "NavigationSystem.h"
 
 // Sets default values
 AVRCharacter::AVRCharacter()
@@ -55,16 +56,44 @@ void AVRCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	PlayerInputComponent->BindAction(TEXT("Teleport"),IE_Released,this, &AVRCharacter::BeginTeleport);
 }
 
-void AVRCharacter::UpdateDestinationMarker()
+bool AVRCharacter::FindTeleportDestination(FVector& OutLocation)
 {
 	FHitResult HitResult;
 	FVector Start = Camera->GetComponentLocation();
-	FVector End = Start + Camera->GetForwardVector()* MaxTeleportDistance;
+	FVector End = Start + Camera->GetForwardVector() * MaxTeleportDistance;
 	bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, Start, End, ECC_Visibility);
 
-	if(bHit)
+	if(!bHit)
 	{
-		DestinationMarker->SetWorldLocation(HitResult.Location);
+		return false;
+	}
+
+	FNavLocation NavLocation;
+	bool bOnNavMesh = UNavigationSystemV1::GetCurrent(GetWorld())->ProjectPointToNavigation(HitResult.Location, NavLocation, TeleportProjectionExtent);
+	//GetWorld()->GetNavigationSystem()->ProjectPointToNavigation(HitResult.Location, NavLocation, TeleportProjectionExtent);
+	//UNavigationSystemV1* NavSystem = FNavigationSystem::GetCurrent(GetWorld());
+	//const UNavigationSystemV1* navSystem = FNavigationSystem::GetCurrent<UNavigationSystemV1>(this);
+	//bool navResult = navSystem->ProjectPointToNavigation(HitResult.Location, NavLocation, TeleportProjectionExtent);
+	//bool bOnNavMesh = NavSystem->ProjectPointToNavigation(HitResult.Location, NavLocation, TeleportProjectionExtent);
+
+	if (!bOnNavMesh)
+	{
+		return false;
+	}
+
+	OutLocation = NavLocation.Location;
+
+	return true;
+}
+
+void AVRCharacter::UpdateDestinationMarker()
+{
+	FVector Location;
+	bool bHasDestination = FindTeleportDestination(Location);
+
+	if(bHasDestination)
+	{
+		DestinationMarker->SetWorldLocation(Location);
 		DestinationMarker->SetVisibility(true);
 	}
 	else
@@ -89,10 +118,7 @@ void AVRCharacter::MoveRight(float throttle)
 void AVRCharacter::BeginTeleport()
 {
 	APlayerController* PC = Cast<APlayerController>(GetController());
-	if(PC)
-	{
-		PC->PlayerCameraManager->StartCameraFade(0,1, TeleportFadeTime,FLinearColor::Black);
-	}
+	StartFade(0, 1);
 	FTimerHandle Handle;
 
 	GetWorldTimerManager().SetTimer(Handle, this, &AVRCharacter::FinishTeleport, TeleportFadeTime, false);
@@ -104,9 +130,14 @@ void AVRCharacter::FinishTeleport()
 	Destination += GetCapsuleComponent()->GetScaledCapsuleHalfHeight() * GetActorUpVector();
 	SetActorLocation(Destination);
 
+	StartFade(1, 0);
+}
+
+void AVRCharacter::StartFade(float FromAlpha, float ToAlpha)
+{
 	APlayerController* PC = Cast<APlayerController>(GetController());
 	if (PC)
 	{
-		PC->PlayerCameraManager->StartCameraFade(1, 0, TeleportFadeTime, FLinearColor::Black);
+		PC->PlayerCameraManager->StartCameraFade(FromAlpha, ToAlpha, TeleportFadeTime, FLinearColor::Black);
 	}
 }
