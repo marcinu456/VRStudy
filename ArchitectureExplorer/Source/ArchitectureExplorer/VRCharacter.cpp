@@ -19,6 +19,7 @@ AVRCharacter::AVRCharacter()
 
 	DestinationMarker = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("DestinationMarker"));
 	DestinationMarker->SetupAttachment(GetRootComponent());
+	DestinationMarker->SetCollisionProfileName("NoCollision");
 
 }
 
@@ -26,7 +27,8 @@ AVRCharacter::AVRCharacter()
 void AVRCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	DestinationMarker->SetVisibility(false);
+
 }
 
 // Called every frame
@@ -61,6 +63,12 @@ void AVRCharacter::UpdateDestinationMarker()
 	if(bHit)
 	{
 		DestinationMarker->SetWorldLocation(HitResult.Location);
+		DestinationMarker->SetVisibility(true);
+	}
+	else
+	{
+		DestinationMarker->SetVisibility(false);
+
 	}
 
 }
