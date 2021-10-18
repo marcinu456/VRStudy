@@ -4,6 +4,7 @@
 #include "VRCharacter.h"
 #include "UObject/Object.h"
 #include "Camera/CameraComponent.h"
+#include "Components/CapsuleComponent.h"
 
 // Sets default values
 AVRCharacter::AVRCharacter()
@@ -51,6 +52,7 @@ void AVRCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 	PlayerInputComponent->BindAxis(TEXT("Forward"),this, &AVRCharacter::MoveForward);
 	PlayerInputComponent->BindAxis(TEXT("Right"),this, &AVRCharacter::MoveRight);
+	PlayerInputComponent->BindAction(TEXT("Teleport"),IE_Released,this, &AVRCharacter::BeginTeleport);
 }
 
 void AVRCharacter::UpdateDestinationMarker()
@@ -81,4 +83,30 @@ void AVRCharacter::MoveForward(float throttle)
 void AVRCharacter::MoveRight(float throttle)
 {
 	AddMovementInput(throttle * Camera->GetRightVector());
+}
+
+
+void AVRCharacter::BeginTeleport()
+{
+	APlayerController* PC = Cast<APlayerController>(GetController());
+	if(PC)
+	{
+		PC->PlayerCameraManager->StartCameraFade(0,1, TeleportFadeTime,FLinearColor::Black);
+	}
+	FTimerHandle Handle;
+
+	GetWorldTimerManager().SetTimer(Handle, this, &AVRCharacter::FinishTeleport, TeleportFadeTime, false);
+}
+
+void AVRCharacter::FinishTeleport()
+{
+	FVector Destination = DestinationMarker->GetComponentLocation();
+	Destination += GetCapsuleComponent()->GetScaledCapsuleHalfHeight() * GetActorUpVector();
+	SetActorLocation(Destination);
+
+	APlayerController* PC = Cast<APlayerController>(GetController());
+	if (PC)
+	{
+		PC->PlayerCameraManager->StartCameraFade(1, 0, TeleportFadeTime, FLinearColor::Black);
+	}
 }
