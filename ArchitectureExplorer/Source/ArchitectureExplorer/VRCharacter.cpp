@@ -6,6 +6,9 @@
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "NavigationSystem.h"
+#include "Components/PostProcessComponent.h"
+#include "Materials/MaterialInstanceDynamic.h"
+
 
 // Sets default values
 AVRCharacter::AVRCharacter()
@@ -23,6 +26,8 @@ AVRCharacter::AVRCharacter()
 	DestinationMarker->SetupAttachment(GetRootComponent());
 	DestinationMarker->SetCollisionProfileName("NoCollision");
 
+	PostProccesComponent = CreateDefaultSubobject<UPostProcessComponent>(TEXT("PostProccesComponent"));
+	PostProccesComponent->SetupAttachment(GetRootComponent());
 }
 
 // Called when the game starts or when spawned
@@ -31,6 +36,13 @@ void AVRCharacter::BeginPlay()
 	Super::BeginPlay();
 	DestinationMarker->SetVisibility(false);
 
+	if (BlinkerMaterialBase)
+	{
+		BlinkerMaterialInstance = UMaterialInstanceDynamic::Create(BlinkerMaterialBase, this);
+		PostProccesComponent->AddOrUpdateBlendable(BlinkerMaterialInstance);
+
+		BlinkerMaterialInstance->SetScalarParameterValue("RadiusSize", .6);
+	}
 }
 
 // Called every frame
@@ -44,6 +56,7 @@ void AVRCharacter::Tick(float DeltaTime)
 	VRRoot->AddWorldOffset(-NewCameraOffset);
 
 	UpdateDestinationMarker();
+	UpdateBlinkers();
 }
 
 // Called to bind functionality to input
@@ -51,8 +64,8 @@ void AVRCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-	PlayerInputComponent->BindAxis(TEXT("Forward"),this, &AVRCharacter::MoveForward);
-	PlayerInputComponent->BindAxis(TEXT("Right"),this, &AVRCharacter::MoveRight);
+	PlayerInputComponent->BindAxis(TEXT("Move_Y"),this, &AVRCharacter::MoveForward);
+	PlayerInputComponent->BindAxis(TEXT("Move_X"),this, &AVRCharacter::MoveRight);
 	PlayerInputComponent->BindAction(TEXT("Teleport"),IE_Released,this, &AVRCharacter::BeginTeleport);
 }
 
@@ -102,6 +115,17 @@ void AVRCharacter::UpdateDestinationMarker()
 
 	}
 
+}
+
+void AVRCharacter::UpdateBlinkers()
+{
+	if (!RadiusVsVelocity)
+	{
+		return;
+	}
+	float Speed = GetVelocity().Size();
+	float Radius = RadiusVsVelocity->GetFloatValue(Speed);
+	BlinkerMaterialInstance->SetScalarParameterValue("RadiusSize", Radius);
 }
 
 void AVRCharacter::MoveForward(float throttle)

@@ -30,6 +30,8 @@ private:
 
 	bool FindTeleportDestination(FVector &OutLocation);
 	void UpdateDestinationMarker();
+	void UpdateBlinkers();
+
 
 	void MoveForward(float throttle);
 	void MoveRight(float throttle);
@@ -49,6 +51,18 @@ private:
 	UPROPERTY(VisibleAnywhere)
 	class UStaticMeshComponent* DestinationMarker;
 
+	UPROPERTY()
+	class UPostProcessComponent* PostProccesComponent;
+
+	UPROPERTY(EditAnywhere)
+	class UMaterialInterface* BlinkerMaterialBase;
+
+	UPROPERTY()
+	class UMaterialInstanceDynamic* BlinkerMaterialInstance;
+
+	UPROPERTY(EditAnywhere)
+	class UCurveFloat* RadiusVsVelocity;
+	      
 	UPROPERTY(EditAnywhere)
 	float MaxTeleportDistance = 1000;
 
