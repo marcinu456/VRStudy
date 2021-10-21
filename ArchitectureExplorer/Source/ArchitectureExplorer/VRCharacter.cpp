@@ -9,6 +9,7 @@
 #include "Components/PostProcessComponent.h"
 #include "Materials/MaterialInstanceDynamic.h"
 #include "MotionControllerComponent.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 AVRCharacter::AVRCharacter()
@@ -82,13 +83,22 @@ void AVRCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 bool AVRCharacter::FindTeleportDestination(FVector& OutLocation)
 {
-	FHitResult HitResult;
+	
 	FVector Start = RightController->GetComponentLocation();
 
 	FVector Look = RightController->GetForwardVector();
-	Look = Look.RotateAngleAxis(30, RightController->GetRightVector());
-	FVector End = Start + Look * MaxTeleportDistance;
-	bool bHit = GetWorld()->LineTraceSingleByChannel(HitResult, Start, End, ECC_Visibility);
+
+
+	FPredictProjectilePathParams Params(TeleportProjectileRadius,Start,Look*TeleportProjectileSpeed,
+		TeleportSimulationTime,ECC_Visibility,this);
+	Params.DrawDebugType = EDrawDebugTrace::ForOneFrame;
+	Params.bTraceComplex = true; //You can disable if you have better collision on scene
+
+	FPredictProjectilePathResult Result;
+
+	bool bHit = UGameplayStatics::PredictProjectilePath(this, Params, Result);
+
+	
 
 	if(!bHit)
 	{
@@ -96,12 +106,7 @@ bool AVRCharacter::FindTeleportDestination(FVector& OutLocation)
 	}
 
 	FNavLocation NavLocation;
-	bool bOnNavMesh = UNavigationSystemV1::GetCurrent(GetWorld())->ProjectPointToNavigation(HitResult.Location, NavLocation, TeleportProjectionExtent);
-	//GetWorld()->GetNavigationSystem()->ProjectPointToNavigation(HitResult.Location, NavLocation, TeleportProjectionExtent);
-	//UNavigationSystemV1* NavSystem = FNavigationSystem::GetCurrent(GetWorld());
-	//const UNavigationSystemV1* navSystem = FNavigationSystem::GetCurrent<UNavigationSystemV1>(this);
-	//bool navResult = navSystem->ProjectPointToNavigation(HitResult.Location, NavLocation, TeleportProjectionExtent);
-	//bool bOnNavMesh = NavSystem->ProjectPointToNavigation(HitResult.Location, NavLocation, TeleportProjectionExtent);
+	bool bOnNavMesh = UNavigationSystemV1::GetCurrent(GetWorld())->ProjectPointToNavigation(Result.HitResult.Location, NavLocation, TeleportProjectionExtent);
 
 	if (!bOnNavMesh)
 	{
