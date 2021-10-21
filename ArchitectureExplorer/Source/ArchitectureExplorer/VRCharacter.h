@@ -31,6 +31,7 @@ private:
 	bool FindTeleportDestination(TArray<FVector> &OutPath, FVector &OutLocation);
 	void UpdateDestinationMarker();
 	void UpdateBlinkers();
+	void DrawTeleporthPath(const TArray<FVector>& Path);
 	void UpdateSpline(const TArray<FVector>& Path);
 	FVector2D GetBlinkerCentre();
 
@@ -89,4 +90,12 @@ private:
 	UPROPERTY(EditAnywhere)
 	FVector TeleportProjectionExtent = FVector(100,100,100);
 
+	UPROPERTY(EditDefaultsOnly)
+	class UStaticMesh* TeleportArchMesh;
+
+	UPROPERTY(EditDefaultsOnly)
+	class UMaterialInterface* TeleportArchMaterial;
+
+	UPROPERTY()
+	TArray<class USplineMeshComponent*> TeleportPathMeshPool;
 };

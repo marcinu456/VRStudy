@@ -11,6 +11,7 @@
 #include "MotionControllerComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "Components/SplineComponent.h"
+#include "Components/SplineMeshComponent.h"
 
 // Sets default values
 AVRCharacter::AVRCharacter()
@@ -94,7 +95,7 @@ bool AVRCharacter::FindTeleportDestination(TArray<FVector>& OutPath, FVector& Ou
 
 	FPredictProjectilePathParams Params(TeleportProjectileRadius,Start,Look*TeleportProjectileSpeed,
 		TeleportSimulationTime,ECC_Visibility,this);
-	Params.DrawDebugType = EDrawDebugTrace::ForOneFrame;
+
 	Params.bTraceComplex = true; //You can disable if you have better collision on scene
 
 	FPredictProjectilePathResult Result;
@@ -137,11 +138,12 @@ void AVRCharacter::UpdateDestinationMarker()
 		DestinationMarker->SetWorldLocation(Location);
 		DestinationMarker->SetVisibility(true);
 
-		UpdateSpline(Path);
+		DrawTeleporthPath(Path);
 	}
 	else
 	{
 		DestinationMarker->SetVisibility(false);
+		DrawTeleporthPath(TArray<FVector>());
 
 	}
 
@@ -160,6 +162,42 @@ void AVRCharacter::UpdateBlinkers()
 	FVector2D Centre = GetBlinkerCentre();
 
 	BlinkerMaterialInstance->SetVectorParameterValue("Centre", FLinearColor(Centre.X, Centre.Y, 0));
+
+}
+
+void AVRCharacter::DrawTeleporthPath(const TArray<FVector>& Path)
+{
+	UpdateSpline(Path);
+
+	for(auto SplineMesh: TeleportPathMeshPool)
+	{
+		SplineMesh->SetVisibility(false);
+	}
+
+	int32 SegmentNum = Path.Num() - 1;
+	for (int32 i = 0; i < SegmentNum; ++i)
+	{
+		if (TeleportPathMeshPool.Num() <= i)
+		{
+			USplineMeshComponent* SplineMesh = NewObject<USplineMeshComponent>(this);
+			SplineMesh->SetMobility(EComponentMobility::Movable);
+			SplineMesh->AttachToComponent(TeleportPath, FAttachmentTransformRules::KeepRelativeTransform);
+			SplineMesh->SetStaticMesh(TeleportArchMesh);
+			SplineMesh->SetMaterial(0, TeleportArchMaterial);
+			SplineMesh->RegisterComponent();
+
+			TeleportPathMeshPool.Add(SplineMesh);
+		}
+
+		USplineMeshComponent* SplineMesh = TeleportPathMeshPool[i];
+		SplineMesh->SetVisibility(true);
+
+		FVector StarPos, StartTangent, EndPos, EndTangent;
+		TeleportPath->GetLocalLocationAndTangentAtSplinePoint(i, StarPos, StartTangent);
+		TeleportPath->GetLocalLocationAndTangentAtSplinePoint(i+1, EndPos, EndTangent);
+		SplineMesh->SetStartAndEnd(StarPos, StartTangent, EndPos, EndTangent);
+	}
+
 
 }
 
