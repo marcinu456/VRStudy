@@ -10,6 +10,7 @@
 #include "Materials/MaterialInstanceDynamic.h"
 #include "MotionControllerComponent.h"
 #include "Kismet/GameplayStatics.h"
+#include "Components/SplineComponent.h"
 
 // Sets default values
 AVRCharacter::AVRCharacter()
@@ -33,6 +34,8 @@ AVRCharacter::AVRCharacter()
 	RightController->SetTrackingSource(EControllerHand::Right);
 	RightController->bDisplayDeviceModel = true;
 
+	TeleportPath = CreateDefaultSubobject<USplineComponent>(TEXT("TeleportPath"));
+	TeleportPath->SetupAttachment(RightController);
 
 	DestinationMarker = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("DestinationMarker"));
 	DestinationMarker->SetupAttachment(GetRootComponent());
@@ -81,7 +84,7 @@ void AVRCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	PlayerInputComponent->BindAction(TEXT("Teleport"),IE_Released,this, &AVRCharacter::BeginTeleport);
 }
 
-bool AVRCharacter::FindTeleportDestination(FVector& OutLocation)
+bool AVRCharacter::FindTeleportDestination(TArray<FVector>& OutPath, FVector& OutLocation)
 {
 	
 	FVector Start = RightController->GetComponentLocation();
@@ -98,11 +101,16 @@ bool AVRCharacter::FindTeleportDestination(FVector& OutLocation)
 
 	bool bHit = UGameplayStatics::PredictProjectilePath(this, Params, Result);
 
-	
-
 	if(!bHit)
 	{
 		return false;
+	}
+
+	
+	//OutPath.Empty();
+	for(auto& PointData: Result.PathData)
+	{
+		OutPath.Add(PointData.Location);
 	}
 
 	FNavLocation NavLocation;
@@ -120,13 +128,16 @@ bool AVRCharacter::FindTeleportDestination(FVector& OutLocation)
 
 void AVRCharacter::UpdateDestinationMarker()
 {
+	TArray<FVector> Path;
 	FVector Location;
-	bool bHasDestination = FindTeleportDestination(Location);
+	bool bHasDestination = FindTeleportDestination(Path, Location);
 
 	if(bHasDestination)
 	{
 		DestinationMarker->SetWorldLocation(Location);
 		DestinationMarker->SetVisibility(true);
+
+		UpdateSpline(Path);
 	}
 	else
 	{
@@ -150,6 +161,20 @@ void AVRCharacter::UpdateBlinkers()
 
 	BlinkerMaterialInstance->SetVectorParameterValue("Centre", FLinearColor(Centre.X, Centre.Y, 0));
 
+}
+
+void AVRCharacter::UpdateSpline(const TArray<FVector> &Path)
+{
+	TeleportPath->ClearSplinePoints(false);
+	int32 index = 0;
+	for(auto& Point: Path)
+	{
+		FVector LocalPosition = TeleportPath->GetComponentTransform().InverseTransformPosition(Point);
+		TeleportPath->AddPoint(FSplinePoint(index, LocalPosition, ESplinePointType::Curve),false);
+		index++;
+	}
+
+	TeleportPath->UpdateSpline();
 }
 
 FVector2D AVRCharacter::GetBlinkerCentre()

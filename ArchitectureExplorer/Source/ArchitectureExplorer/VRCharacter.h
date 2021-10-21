@@ -28,9 +28,10 @@ public:
 
 private:
 
-	bool FindTeleportDestination(FVector &OutLocation);
+	bool FindTeleportDestination(TArray<FVector> &OutPath, FVector &OutLocation);
 	void UpdateDestinationMarker();
 	void UpdateBlinkers();
+	void UpdateSpline(const TArray<FVector>& Path);
 	FVector2D GetBlinkerCentre();
 
 
@@ -56,6 +57,9 @@ private:
 	class USceneComponent* VRRoot;
 
 	UPROPERTY(VisibleAnywhere)
+	class USplineComponent* TeleportPath;
+
+	UPROPERTY(VisibleAnywhere)
 	class UStaticMeshComponent* DestinationMarker;
 
 	UPROPERTY()
@@ -74,7 +78,7 @@ private:
 	float TeleportProjectileRadius = 10;
 
 	UPROPERTY(EditAnywhere)
-	float TeleportProjectileSpeed = 8000;
+	float TeleportProjectileSpeed = 800;
 
 	UPROPERTY(EditAnywhere)
 	float TeleportSimulationTime = 2;
