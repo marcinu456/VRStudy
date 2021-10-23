@@ -28,9 +28,31 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 private:
+	// Callbacks
+
+	UFUNCTION()
+		void ActorBeginOverlap(AActor* OverlappedActor, AActor* OtherActor);
+	UFUNCTION()
+		void ActorEndOverlap(AActor* OverlappedActor, AActor* OtherActor);
+
+	//UFUNCTION()
+	//	void ComponentBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+
+	//UFUNCTION()
+	//	void ComponentEndOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+
+
+
+	// Helpers
+
+	bool CanClimb() const;
+
 	// Default sub object
 
 	UPROPERTY(VisibleAnywhere)
-	UMotionControllerComponent* MotionController;
+		UMotionControllerComponent* MotionController;
+
+	// State
+	bool bCanClimb = false;
 
 };
