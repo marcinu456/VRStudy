@@ -1573,3 +1573,216 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2021.10.23-20.54.30:433][284]LogPlayLevel: Display: Destroying online subsystem :Context_11
 [2021.10.23-20.54.30:445][284]LogEngine: Changing dynamic resolution state.
 [2021.10.23-20.55.10:679][779]LogUObjectHash: Compacting FUObjectHashTables data took   2.61ms
+[2021.10.23-21.01.53:930][390]LogHotReload: New module detected: UE4Editor-ArchitectureExplorer-0019.dll
+[2021.10.23-21.01.54:687][432]LogHotReload: Starting Hot-Reload from IDE
+[2021.10.23-21.01.54:737][432]LogClass: Could not find existing class HandController in package /Script/ArchitectureExplorer for HotReload, assuming new class
+[2021.10.23-21.01.54:737][432]LogClass: Function ActorBeginOverlap is new.
+[2021.10.23-21.01.54:737][432]LogClass: Function ActorEndOverlap is new.
+[2021.10.23-21.01.54:756][432]LogHotReload: Re-instancing HandController after hot-reload.
+[2021.10.23-21.01.54:805][432]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'ArchitectureExplorer' in 0.0003 seconds. Added 3 classes and 2 folders.
+[2021.10.23-21.01.54:811][432]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2021.10.23-21.01.54:888][432]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0105 seconds. Added 3825 classes and 930 folders.
+[2021.10.23-21.01.54:891][432]Display: HotReload took  0.2s.
+[2021.10.23-21.02.00:718][ 58]LogEditorViewport: Clicking on Actor (LMB): BP_HandHold_C (BP_HandHold)
+[2021.10.23-21.02.01:522][145]Cmd: DUPLICATE
+[2021.10.23-21.02.01:522][145]Cmd: ACTOR DUPLICATE
+[2021.10.23-21.02.10:569][142]Cmd: DUPLICATE
+[2021.10.23-21.02.10:569][142]Cmd: ACTOR DUPLICATE
+[2021.10.23-21.02.14:942][643]Cmd: TRANSACTION UNDO
+[2021.10.23-21.02.14:942][643]LogEditorTransaction: Undo Move Actors
+[2021.10.23-21.02.15:527][660]Cmd: TRANSACTION UNDO
+[2021.10.23-21.02.15:527][660]LogEditorTransaction: Undo Move Actors
+[2021.10.23-21.02.16:161][725]Cmd: TRANSACTION UNDO
+[2021.10.23-21.02.16:161][725]LogEditorTransaction: Undo Duplicate Actors
+[2021.10.23-21.02.17:264][826]LogEditorViewport: Clicking on Actor (context menu): BP_HandHold_C (BP_HandHold)
+[2021.10.23-21.02.18:070][901]LogEditorViewport: Clicking on Actor (LMB): BP_HandHold_C (BP_HandHold)
+[2021.10.23-21.02.18:883][984]Cmd: DUPLICATE
+[2021.10.23-21.02.18:883][984]Cmd: ACTOR DUPLICATE
+[2021.10.23-21.02.41:026][441]Cmd: DUPLICATE
+[2021.10.23-21.02.41:026][441]Cmd: ACTOR DUPLICATE
+[2021.10.23-21.03.01:129][673]Cmd: TRANSACTION UNDO
+[2021.10.23-21.03.01:129][673]LogEditorTransaction: Undo Move Actors
+[2021.10.23-21.03.01:615][685]Cmd: TRANSACTION UNDO
+[2021.10.23-21.03.01:615][685]LogEditorTransaction: Undo Move Actors
+[2021.10.23-21.03.05:717][127]Cmd: DUPLICATE
+[2021.10.23-21.03.05:717][127]Cmd: ACTOR DUPLICATE
+[2021.10.23-21.03.14:524][132]Cmd: DELETE
+[2021.10.23-21.03.14:529][132]Cmd: ACTOR DELETE
+[2021.10.23-21.03.14:550][132]LogEditorActor: Deleted Actor: BP_HandHold_C
+[2021.10.23-21.03.14:551][132]LogEditorActor: Deleted Actor: BP_HandHold_C
+[2021.10.23-21.03.14:613][132]LogUObjectHash: Compacting FUObjectHashTables data took   4.81ms
+[2021.10.23-21.03.14:614][132]LogEditorActor: Deleted 2 Actors (0.085 secs)
+[2021.10.23-21.03.17:502][449]Cmd: DUPLICATE
+[2021.10.23-21.03.17:502][449]Cmd: ACTOR DUPLICATE
+[2021.10.23-21.03.29:416][739]Cmd: DUPLICATE
+[2021.10.23-21.03.29:416][739]Cmd: ACTOR DUPLICATE
+[2021.10.23-21.03.56:570][908]LogTemp: Repeating last play command: VR Preview
+[2021.10.23-21.03.56:582][908]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.10.23-21.03.56:583][908]LogHMD: Initializing OVRPlugin session
+[2021.10.23-21.03.56:819][908]LogHMD: Allocating Oculus 3776 x 1888 rendertarget swapchain
+[2021.10.23-21.03.56:819][908]PIE: New page: PIE session: MainMap (24 paź 2021, 01:03:56)
+[2021.10.23-21.03.56:820][908]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_MainMap
+[2021.10.23-21.03.56:893][908]LogPlayLevel: PIE: StaticDuplicateObject took: (0.073623s)
+[2021.10.23-21.03.56:894][908]LogAIModule: Creating AISystem for world MainMap
+[2021.10.23-21.03.56:894][908]LogPlayLevel: PIE: World Init took: (0.001045s)
+[2021.10.23-21.03.56:894][908]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/MainMap.MainMap to /Game/Maps/UEDPIE_0_MainMap.MainMap (0.074833s)
+[2021.10.23-21.03.56:957][908]LogUObjectHash: Compacting FUObjectHashTables data took   4.34ms
+[2021.10.23-21.03.56:960][908]LogAudio: Display: Creating Audio Device:                 Id: 8, Scope: Unique, Realtime: True
+[2021.10.23-21.03.56:960][908]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.10.23-21.03.56:960][908]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.10.23-21.03.56:960][908]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.10.23-21.03.56:960][908]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.10.23-21.03.56:960][908]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.10.23-21.03.56:960][908]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.10.23-21.03.56:960][908]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.10.23-21.03.56:960][908]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.10.23-21.03.56:960][908]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2021.10.23-21.03.56:960][908]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2021.10.23-21.03.56:961][908]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2021.10.23-21.03.56:961][908]LogAudioMixer: Display: Initializing audio mixer.
+[2021.10.23-21.03.56:964][908]LogAudioMixer: Display: 0: FrontLeft
+[2021.10.23-21.03.56:964][908]LogAudioMixer: Display: 1: FrontRight
+[2021.10.23-21.03.56:965][908]LogAudioMixer: Display: 0: FrontLeft
+[2021.10.23-21.03.56:965][908]LogAudioMixer: Display: 1: FrontRight
+[2021.10.23-21.03.56:966][908]LogAudioMixer: Display: 0: FrontLeft
+[2021.10.23-21.03.56:966][908]LogAudioMixer: Display: 1: FrontRight
+[2021.10.23-21.03.56:967][908]LogAudioMixer: Display: 0: FrontLeft
+[2021.10.23-21.03.56:967][908]LogAudioMixer: Display: 1: FrontRight
+[2021.10.23-21.03.56:968][908]LogAudioMixer: Display: 0: FrontLeft
+[2021.10.23-21.03.56:968][908]LogAudioMixer: Display: 1: FrontRight
+[2021.10.23-21.03.56:968][908]LogAudioMixer: Display: 2: FrontCenter
+[2021.10.23-21.03.56:968][908]LogAudioMixer: Display: 3: LowFrequency
+[2021.10.23-21.03.56:968][908]LogAudioMixer: Display: 4: BackLeft
+[2021.10.23-21.03.56:968][908]LogAudioMixer: Display: 5: BackRight
+[2021.10.23-21.03.56:968][908]LogAudioMixer: Display: 6: SideLeft
+[2021.10.23-21.03.56:969][908]LogAudioMixer: Display: 7: SideRight
+[2021.10.23-21.03.56:969][908]LogAudioMixer: Display: 0: FrontLeft
+[2021.10.23-21.03.56:970][908]LogAudioMixer: Display: 1: FrontRight
+[2021.10.23-21.03.56:971][908]LogAudioMixer: Display: 0: FrontLeft
+[2021.10.23-21.03.56:971][908]LogAudioMixer: Display: 1: FrontRight
+[2021.10.23-21.03.56:972][908]LogAudioMixer: Display: 0: FrontLeft
+[2021.10.23-21.03.56:972][908]LogAudioMixer: Display: 1: FrontRight
+[2021.10.23-21.03.56:973][908]LogAudioMixer: Display: 0: FrontLeft
+[2021.10.23-21.03.56:973][908]LogAudioMixer: Display: 1: FrontRight
+[2021.10.23-21.03.56:979][908]LogAudioMixer: Display: Using Audio Device Słuchawki (Oculus Virtual Audio Device)
+[2021.10.23-21.03.56:979][908]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.10.23-21.03.56:979][908]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.10.23-21.03.56:979][908]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.10.23-21.03.56:980][908]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.10.23-21.03.56:980][908]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2021.10.23-21.03.56:980][908]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2021.10.23-21.03.56:981][908]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2021.10.23-21.03.56:981][908]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2021.10.23-21.03.56:981][908]LogInit: FAudioDevice initialized.
+[2021.10.23-21.03.56:981][908]LogAudio: Display: Audio Device (ID: 8) registered with world 'MainMap'.
+[2021.10.23-21.03.56:993][908]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.10.23-21.03.57:004][908]LogHMD: Allocating Oculus 4128 x 2272 rendertarget swapchain
+[2021.10.23-21.03.57:044][908]LogLoad: Game class is 'BP_VRGameModeBase_C'
+[2021.10.23-21.03.57:062][908]LogWorld: Bringing World /Game/Maps/UEDPIE_0_MainMap.MainMap up for play (max tick rate 0) at 2021.10.23-23.03.57
+[2021.10.23-21.03.57:063][908]LogWorld: Bringing up level for play took: 0.017935
+[2021.10.23-21.03.57:063][908]LogOnline: OSS: Creating online subsystem instance for: :Context_12
+[2021.10.23-21.03.57:074][908]PIE: Server logged in
+[2021.10.23-21.03.57:076][908]PIE: Play in editor total start time 0,5 seconds.
+[2021.10.23-21.03.57:077][908]LogEngine: Changing dynamic resolution state.
+[2021.10.23-21.03.57:143][908]LogHMD: Allocating Oculus 4128 x 2272 depth rendertarget swapchain
+[2021.10.23-21.04.44:484][715]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.10.23-21.04.44:484][715]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_MainMap
+[2021.10.23-21.04.44:512][715]LogSlate: Window 'ArchitectureExplorer Preview [NetMode: Standalone]  (64-bit/Windows) OculusHMD' being destroyed
+[2021.10.23-21.04.44:539][715]LogWorld: UWorld::CleanupWorld for MainMap, bSessionEnded=true, bCleanupResources=true
+[2021.10.23-21.04.44:541][715]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.10.23-21.04.44:549][715]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2021.10.23-21.04.44:564][715]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.10.23-21.04.44:586][715]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2021.10.23-21.04.44:588][715]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2021.10.23-21.04.44:597][715]LogUObjectHash: Compacting FUObjectHashTables data took   3.05ms
+[2021.10.23-21.04.44:621][716]LogPlayLevel: Display: Destroying online subsystem :Context_12
+[2021.10.23-21.04.44:626][716]LogEngine: Changing dynamic resolution state.
+[2021.10.23-21.04.47:484][ 11]LogTemp: Repeating last play command: VR Preview
+[2021.10.23-21.04.47:489][ 11]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2021.10.23-21.04.47:489][ 11]LogHMD: Initializing OVRPlugin session
+[2021.10.23-21.04.47:588][ 11]LogHMD: Allocating Oculus 3776 x 1888 rendertarget swapchain
+[2021.10.23-21.04.47:589][ 11]PIE: New page: PIE session: MainMap (24 paź 2021, 01:04:47)
+[2021.10.23-21.04.47:611][ 11]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_MainMap
+[2021.10.23-21.04.47:667][ 11]LogPlayLevel: PIE: StaticDuplicateObject took: (0.056427s)
+[2021.10.23-21.04.47:667][ 11]LogAIModule: Creating AISystem for world MainMap
+[2021.10.23-21.04.47:668][ 11]LogPlayLevel: PIE: World Init took: (0.001022s)
+[2021.10.23-21.04.47:668][ 11]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/MainMap.MainMap to /Game/Maps/UEDPIE_0_MainMap.MainMap (0.057638s)
+[2021.10.23-21.04.47:691][ 11]LogUObjectHash: Compacting FUObjectHashTables data took   2.80ms
+[2021.10.23-21.04.47:694][ 11]LogAudio: Display: Creating Audio Device:                 Id: 9, Scope: Unique, Realtime: True
+[2021.10.23-21.04.47:694][ 11]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2021.10.23-21.04.47:694][ 11]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2021.10.23-21.04.47:694][ 11]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2021.10.23-21.04.47:694][ 11]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2021.10.23-21.04.47:694][ 11]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2021.10.23-21.04.47:694][ 11]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2021.10.23-21.04.47:694][ 11]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2021.10.23-21.04.47:694][ 11]LogAudio: Display: AudioDevice MaxSources: 32
+[2021.10.23-21.04.47:694][ 11]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2021.10.23-21.04.47:694][ 11]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2021.10.23-21.04.47:694][ 11]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2021.10.23-21.04.47:694][ 11]LogAudioMixer: Display: Initializing audio mixer.
+[2021.10.23-21.04.47:696][ 11]LogAudioMixer: Display: 0: FrontLeft
+[2021.10.23-21.04.47:696][ 11]LogAudioMixer: Display: 1: FrontRight
+[2021.10.23-21.04.47:697][ 11]LogAudioMixer: Display: 0: FrontLeft
+[2021.10.23-21.04.47:697][ 11]LogAudioMixer: Display: 1: FrontRight
+[2021.10.23-21.04.47:698][ 11]LogAudioMixer: Display: 0: FrontLeft
+[2021.10.23-21.04.47:698][ 11]LogAudioMixer: Display: 1: FrontRight
+[2021.10.23-21.04.47:699][ 11]LogAudioMixer: Display: 0: FrontLeft
+[2021.10.23-21.04.47:699][ 11]LogAudioMixer: Display: 1: FrontRight
+[2021.10.23-21.04.47:700][ 11]LogAudioMixer: Display: 0: FrontLeft
+[2021.10.23-21.04.47:700][ 11]LogAudioMixer: Display: 1: FrontRight
+[2021.10.23-21.04.47:700][ 11]LogAudioMixer: Display: 2: FrontCenter
+[2021.10.23-21.04.47:700][ 11]LogAudioMixer: Display: 3: LowFrequency
+[2021.10.23-21.04.47:700][ 11]LogAudioMixer: Display: 4: BackLeft
+[2021.10.23-21.04.47:700][ 11]LogAudioMixer: Display: 5: BackRight
+[2021.10.23-21.04.47:700][ 11]LogAudioMixer: Display: 6: SideLeft
+[2021.10.23-21.04.47:700][ 11]LogAudioMixer: Display: 7: SideRight
+[2021.10.23-21.04.47:701][ 11]LogAudioMixer: Display: 0: FrontLeft
+[2021.10.23-21.04.47:701][ 11]LogAudioMixer: Display: 1: FrontRight
+[2021.10.23-21.04.47:702][ 11]LogAudioMixer: Display: 0: FrontLeft
+[2021.10.23-21.04.47:702][ 11]LogAudioMixer: Display: 1: FrontRight
+[2021.10.23-21.04.47:703][ 11]LogAudioMixer: Display: 0: FrontLeft
+[2021.10.23-21.04.47:703][ 11]LogAudioMixer: Display: 1: FrontRight
+[2021.10.23-21.04.47:704][ 11]LogAudioMixer: Display: 0: FrontLeft
+[2021.10.23-21.04.47:704][ 11]LogAudioMixer: Display: 1: FrontRight
+[2021.10.23-21.04.47:709][ 11]LogAudioMixer: Display: Using Audio Device Słuchawki (Oculus Virtual Audio Device)
+[2021.10.23-21.04.47:709][ 11]LogAudioMixer: Display: Initializing Sound Submixes...
+[2021.10.23-21.04.47:709][ 11]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2021.10.23-21.04.47:709][ 11]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2021.10.23-21.04.47:709][ 11]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2021.10.23-21.04.47:709][ 11]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2021.10.23-21.04.47:709][ 11]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2021.10.23-21.04.47:710][ 11]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2021.10.23-21.04.47:710][ 11]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2021.10.23-21.04.47:710][ 11]LogInit: FAudioDevice initialized.
+[2021.10.23-21.04.47:710][ 11]LogAudio: Display: Audio Device (ID: 9) registered with world 'MainMap'.
+[2021.10.23-21.04.47:721][ 11]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.10.23-21.04.47:737][ 11]LogHMD: Allocating Oculus 4128 x 2272 rendertarget swapchain
+[2021.10.23-21.04.47:782][ 11]LogLoad: Game class is 'BP_VRGameModeBase_C'
+[2021.10.23-21.04.47:795][ 11]LogWorld: Bringing World /Game/Maps/UEDPIE_0_MainMap.MainMap up for play (max tick rate 0) at 2021.10.23-23.04.47
+[2021.10.23-21.04.47:795][ 11]LogWorld: Bringing up level for play took: 0.012477
+[2021.10.23-21.04.47:795][ 11]LogOnline: OSS: Creating online subsystem instance for: :Context_13
+[2021.10.23-21.04.47:803][ 11]PIE: Server logged in
+[2021.10.23-21.04.47:804][ 11]PIE: Play in editor total start time 0,315 seconds.
+[2021.10.23-21.04.47:805][ 11]LogEngine: Changing dynamic resolution state.
+[2021.10.23-21.04.47:840][ 11]LogHMD: Allocating Oculus 4128 x 2272 depth rendertarget swapchain
+[2021.10.23-21.04.47:868][ 12]LogCharacterMovement: Warning: GetSimulationTimeStep() - Max iterations 8 hit while remaining time 0.062301 > MaxSimulationTimeStep (0.050) for 'BP_VRCharacter_C_0', movement 'Walking'
+[2021.10.23-21.05.19:657][189]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2021.10.23-21.05.19:657][189]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_MainMap
+[2021.10.23-21.05.19:680][189]LogSlate: Window 'ArchitectureExplorer Preview [NetMode: Standalone]  (64-bit/Windows) OculusHMD' being destroyed
+[2021.10.23-21.05.19:709][189]LogWorld: UWorld::CleanupWorld for MainMap, bSessionEnded=true, bCleanupResources=true
+[2021.10.23-21.05.19:711][189]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.10.23-21.05.19:716][189]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2021.10.23-21.05.19:731][189]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2021.10.23-21.05.19:753][189]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2021.10.23-21.05.19:754][189]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2021.10.23-21.05.19:764][189]LogUObjectHash: Compacting FUObjectHashTables data took   2.71ms
+[2021.10.23-21.05.19:787][190]LogPlayLevel: Display: Destroying online subsystem :Context_13
+[2021.10.23-21.05.19:792][190]LogEngine: Changing dynamic resolution state.
+[2021.10.23-21.05.34:305][368]LogUObjectHash: Compacting FUObjectHashTables data took   2.81ms
+[2021.10.23-21.05.34:341][368]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Maps/MainMap" FILE="../../../../../../GitKraken/VRStudy/ArchitectureExplorer/Content/Maps/MainMap.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2021.10.23-21.05.34:363][368]LogUObjectHash: Compacting FUObjectHashTables data took   0.68ms
+[2021.10.23-21.05.34:585][368]LogSavePackage: Moving '../../../../../../GitKraken/VRStudy/ArchitectureExplorer/Saved/MainMap077F1326452D094A858839B68850F3D1.tmp' to '../../../../../../GitKraken/VRStudy/ArchitectureExplorer/Content/Maps/MainMap.umap'
+[2021.10.23-21.05.34:592][368]LogFileHelpers: Saving map 'MainMap' took 0.251
+[2021.10.23-21.05.34:616][368]AssetCheck: New page: Asset Save: MainMap
+[2021.10.23-21.05.34:616][368]LogContentValidation: Display: Validating World /Game/Maps/MainMap.MainMap
