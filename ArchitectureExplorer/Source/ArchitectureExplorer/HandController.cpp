@@ -113,7 +113,7 @@ void AHandController::Grip()
 		OtherController->bIsClimbing = false;
 
 		ACharacter* Character = Cast<ACharacter>(GetAttachParentActor());
-		if (Character != nullptr)
+		if (Character)
 		{
 			Character->GetCharacterMovement()->SetMovementMode(EMovementMode::MOVE_Flying);//Check other mods
 		}
@@ -127,7 +127,7 @@ void AHandController::Release()
 		bIsClimbing = false;
 
 		ACharacter* Character = Cast<ACharacter>(GetAttachParentActor());
-		if (Character != nullptr)
+		if (Character)
 		{
 			Character->GetCharacterMovement()->SetMovementMode(EMovementMode::MOVE_Falling);
 		}
