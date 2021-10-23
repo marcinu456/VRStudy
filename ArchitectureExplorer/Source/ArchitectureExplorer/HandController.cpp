@@ -3,6 +3,8 @@
 
 #include "HandController.h"
 
+#include "GameFramework/Pawn.h"
+#include "GameFramework/PlayerController.h"
 // Sets default values
 AHandController::AHandController()
 {
@@ -56,7 +58,15 @@ void AHandController::ActorBeginOverlap(AActor* OverlappedActor, AActor* OtherAc
 	bool bNewCanClimb = CanClimb();
 	if (!bCanClimb && bNewCanClimb)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Can Climb!"));
+		APawn* Pawn = Cast<APawn>(GetAttachParentActor());
+		if (Pawn)
+		{
+			APlayerController* Controller = Cast<APlayerController>(Pawn->GetController());
+			if (Controller)
+			{
+				Controller->PlayHapticEffect(HapticEffect, MotionController->GetTrackingSource());
+			}
+		}
 	}
 	bCanClimb = bNewCanClimb;
 }

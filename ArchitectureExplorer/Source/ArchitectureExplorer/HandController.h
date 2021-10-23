@@ -35,13 +35,15 @@ private:
 	UFUNCTION()
 		void ActorEndOverlap(AActor* OverlappedActor, AActor* OtherActor);
 
-	//UFUNCTION()
+	//UFUNCTION() Check why this isn't work
 	//	void ComponentBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
 	//UFUNCTION()
 	//	void ComponentEndOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
 
-
+	// Parameters
+	UPROPERTY(EditDefaultsOnly)
+	class UHapticFeedbackEffect_Base* HapticEffect;
 
 	// Helpers
 
