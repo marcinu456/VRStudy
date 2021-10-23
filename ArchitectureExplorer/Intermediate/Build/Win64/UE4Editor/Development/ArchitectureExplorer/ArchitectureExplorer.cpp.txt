@@ -1,2 +1,0 @@
-D:\GitKraken\VRStudy\ArchitectureExplorer\Intermediate\Build\Win64\UE4Editor\Development\ArchitectureExplorer\Definitions.ArchitectureExplorer.h
-D:\GitKraken\VRStudy\ArchitectureExplorer\Source\ArchitectureExplorer\ArchitectureExplorer.h
