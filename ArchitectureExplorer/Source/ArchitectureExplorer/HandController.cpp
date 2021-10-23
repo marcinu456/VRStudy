@@ -32,6 +32,12 @@ void AHandController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	if (bIsClimbing)
+	{
+		FVector HandControllerDelta = GetActorLocation() - ClimbingStartLocation;
+
+		GetAttachParentActor()->AddActorWorldOffset(-HandControllerDelta);
+	}
 }
 
 //void AHandController::ComponentBeginOverlap(UPrimitiveComponent* OverlappedComp, AActor* OtherActor,
@@ -92,4 +98,20 @@ bool AHandController::CanClimb() const
 	}
 
 	return false;
+}
+
+void AHandController::Grip()
+{
+	if (!bCanClimb) return;
+
+	if (!bIsClimbing)
+	{
+		bIsClimbing = true;
+		ClimbingStartLocation = GetActorLocation();
+	}
+}
+
+void AHandController::Release()
+{
+	bIsClimbing = false;
 }
