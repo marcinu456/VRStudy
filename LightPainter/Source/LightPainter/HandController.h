@@ -6,6 +6,7 @@
 #include "GameFramework/Actor.h"
 
 #include "MotionControllerComponent.h"
+#include "Stroke.h"
 
 #include "HandController.generated.h"
 
@@ -17,6 +18,8 @@ class LIGHTPAINTER_API AHandController : public AActor
 public:
 	AHandController();
 
+	void TriggerPressed();
+	void TriggerReleased();
 protected:
 	virtual void BeginPlay() override;
 
@@ -26,6 +29,10 @@ public:
 	void SetHand(EControllerHand Hand) { MotionController->SetTrackingSource(Hand); }
 
 private:
+	// Config
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<AStroke> StrokeClass;
+
 	// Components
 	UPROPERTY(VisibleAnywhere)
 		UMotionControllerComponent* MotionController;
