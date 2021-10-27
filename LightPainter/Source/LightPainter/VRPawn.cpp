@@ -5,6 +5,7 @@
 
 #include "Engine/World.h"
 
+#include "Saving/PainterSaveGame.h"
 
 AVRPawn::AVRPawn()
 {
@@ -29,6 +30,10 @@ void AVRPawn::BeginPlay()
 		RightHandController->SetHand(EControllerHand::Right);
 		UE_LOG(LogTemp, Warning, TEXT("Some warning message"));
 	}
+
+	auto SaveGame = UPainterSaveGame::Create();
+
+	SaveGame->Save();
 }
 
 void AVRPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
