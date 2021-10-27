@@ -4,34 +4,29 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+
+#include "Components/InstancedStaticMeshComponent.h"
+
 #include "Stroke.generated.h"
 
 UCLASS()
 class LIGHTPAINTER_API AStroke : public AActor
 {
 	GENERATED_BODY()
-	
-public:	
-	// Sets default values for this actor's properties
+
+public:
 	AStroke();
 
 	void Update(FVector CursorLocation);
 
 private:
-	class USplineMeshComponent* CreateSplineMesh();
-
 	// Components
 	UPROPERTY(VisibleAnywhere)
 		USceneComponent* Root;
 
-	// Config
-	UPROPERTY(EditDefaultsOnly)
-		UStaticMesh* SplineMesh;
-
-	UPROPERTY(EditDefaultsOnly)
-		UMaterialInterface* SplineMaterial;
+	UPROPERTY(VisibleAnywhere)
+		UInstancedStaticMeshComponent* StrokeMeshes;
 
 	// State
 	FVector PreviousCursorLocation;
-
 };
