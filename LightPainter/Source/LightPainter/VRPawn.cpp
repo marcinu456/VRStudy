@@ -31,9 +31,7 @@ void AVRPawn::BeginPlay()
 		UE_LOG(LogTemp, Warning, TEXT("Some warning message"));
 	}
 
-	auto SaveGame = UPainterSaveGame::Create();
 
-	SaveGame->Save();
 }
 
 void AVRPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -42,4 +40,27 @@ void AVRPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 	PlayerInputComponent->BindAction(TEXT("RightTrigger"), EInputEvent::IE_Pressed, this, &AVRPawn::RightTriggerPressed);
 	PlayerInputComponent->BindAction(TEXT("RightTrigger"), EInputEvent::IE_Released, this, &AVRPawn::RightTriggerReleased);
+
+	PlayerInputComponent->BindAction(TEXT("Save"), EInputEvent::IE_Released, this, &AVRPawn::Save);
+	PlayerInputComponent->BindAction(TEXT("Load"), EInputEvent::IE_Released, this, &AVRPawn::Load);
+}
+
+void AVRPawn::Save()
+{
+	auto SaveGame = UPainterSaveGame::Create();
+	SaveGame->SetState("Hell");
+	SaveGame->Save();
+}
+
+void AVRPawn::Load()
+{
+	auto LoadGame = UPainterSaveGame::Load();
+	if (LoadGame)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Load State %s"), *LoadGame->GetState());
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Not Found "));
+	}
 }
