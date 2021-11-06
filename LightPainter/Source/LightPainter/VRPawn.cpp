@@ -49,6 +49,7 @@ void AVRPawn::Save()
 {
 	auto SaveGame = UPainterSaveGame::Create();
 	SaveGame->SetState("Hell");
+	SaveGame->SerializeFromWorld(GetWorld());
 	SaveGame->Save();
 }
 
@@ -57,6 +58,7 @@ void AVRPawn::Load()
 	auto LoadGame = UPainterSaveGame::Load();
 	if (LoadGame)
 	{
+		LoadGame->DeserializeToWorld(GetWorld());
 		UE_LOG(LogTemp, Warning, TEXT("Load State %s"), *LoadGame->GetState());
 	}
 	else
