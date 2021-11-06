@@ -21,8 +21,27 @@ AStroke::AStroke()
 
 }
 
+FStrokeState AStroke::SerializeToStruct() const
+{
+	FStrokeState StrokeState;
+	StrokeState.Class = GetClass();
+	StrokeState.ControlPoints = ControlPoints;
+	return StrokeState;
+}
+
+AStroke* AStroke::SpawnAndDeserializeFromStruct(UWorld* World, const FStrokeState& StrokeState)
+{
+	AStroke* Stroke = World->SpawnActor<AStroke>(StrokeState.Class);
+	for(auto& ControlPoint: StrokeState.ControlPoints)
+	{
+		Stroke->Update(ControlPoint);
+	}
+	return Stroke;
+}
+
 void AStroke::Update(FVector CursorLocation)
 {
+	ControlPoints.Add(CursorLocation);
 	if (PreviousCursorLocation.IsNearlyZero())
 	{
 		PreviousCursorLocation = CursorLocation;
@@ -35,6 +54,8 @@ void AStroke::Update(FVector CursorLocation)
 
 	PreviousCursorLocation = CursorLocation;
 }
+
+
 
 FTransform AStroke::GetNextSegmentTransform(FVector CurrentLocation) const
 {
