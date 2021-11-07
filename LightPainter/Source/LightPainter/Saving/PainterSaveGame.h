@@ -28,7 +28,7 @@ class LIGHTPAINTER_API UPainterSaveGame : public USaveGame
 public:
 	static UPainterSaveGame* Create();
 	bool Save();
-	static UPainterSaveGame* Load();
+	static UPainterSaveGame* Load(FString LoadSlot);
 
 	void SetState(FString NewState) { State = NewState; }
 	FString GetState() const { return State; };
@@ -36,12 +36,17 @@ public:
 	void SerializeFromWorld(UWorld* World);
 	void DeserializeToWorld(UWorld* World);
 
+	FString GetSlotName() const { return SlotName; }
+
 private:
 	void ClearWorld(UWorld* World);
 
 	//State
 	UPROPERTY()
 	FString State;
+
+	UPROPERTY()
+	FString SlotName;
 
 	UPROPERTY()
 	TArray<FStrokeState> Strokes;
