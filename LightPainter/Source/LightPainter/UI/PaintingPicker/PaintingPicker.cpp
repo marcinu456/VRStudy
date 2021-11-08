@@ -3,6 +3,7 @@
 
 #include "PaintingPicker.h"
 #include "PaintingGrid.h"
+#include "LightPainter/Saving/PainterSaveGameIndex.h"
 
 // Sets default values
 APaintingPicker::APaintingPicker()
@@ -28,7 +29,12 @@ void APaintingPicker::BeginPlay()
 	auto PaintingGridWidget = Cast<UPaintingGrid>(PaintingGrid->GetUserWidgetObject());
 	if (!PaintingGridWidget) return;
 
-	PaintingGridWidget->AddPainting();
+	int32 Index = 0;
+	for (auto& SlotNamse : UPainterSaveGameIndex::Load()->GetSlotNames())
+	{
+		PaintingGridWidget->AddPainting(Index);
+		Index++;
+	}
 }
 
 
