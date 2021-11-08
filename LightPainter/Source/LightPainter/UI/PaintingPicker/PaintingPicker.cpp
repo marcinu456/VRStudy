@@ -2,6 +2,8 @@
 
 
 #include "PaintingPicker.h"
+
+#include "ActionBar.h"
 #include "PaintingGrid.h"
 #include "LightPainter/Saving/PainterSaveGameIndex.h"
 
@@ -21,11 +23,24 @@ APaintingPicker::APaintingPicker()
 	ActionBar->SetupAttachment(GetRootComponent());
 }
 
+
 // Called when the game starts or when spawned
 void APaintingPicker::BeginPlay()
 {
 	Super::BeginPlay();
 
+	auto PaintingActionBar = Cast<UActionBar>(ActionBar->GetUserWidgetObject());
+	if (PaintingActionBar)
+	{
+		PaintingActionBar->SetParentPicker(this);
+	}
+
+	RefreshSlots();
+
+}
+
+void APaintingPicker::RefreshSlots()
+{
 	auto PaintingGridWidget = Cast<UPaintingGrid>(PaintingGrid->GetUserWidgetObject());
 	if (!PaintingGridWidget) return;
 
@@ -37,5 +52,16 @@ void APaintingPicker::BeginPlay()
 	}
 }
 
+void APaintingPicker::AddPainting()
+{
+	UPainterSaveGame::Create();
 
+	RefreshSlots();
+}
+
+void APaintingPicker::ToggleDeleteMode()
+{
+	UE_LOG(LogTemp, Warning, TEXT("ToggleDeleteMode"));
+
+}
 

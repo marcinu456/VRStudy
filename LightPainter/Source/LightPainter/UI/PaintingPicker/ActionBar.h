@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "PaintingPicker.h"
 #include "Blueprint/UserWidget.h"
 #include "Components/Button.h"
 #include "ActionBar.generated.h"
@@ -18,6 +19,8 @@ class LIGHTPAINTER_API UActionBar : public UUserWidget
 public:
 	bool Initialize() override;
 
+	void SetParentPicker(APaintingPicker* _ParentPicker) { ParentPicker = _ParentPicker; }
+
 protected:
 	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, meta = (BindWidget))
 		UButton* AddButton;
@@ -29,12 +32,21 @@ private:
 	UFUNCTION()
 		void AddButtonClicked()
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Add clicked."));
+		if(ParentPicker)
+		{
+			ParentPicker->AddPainting();
+		}
 	}
 
 	UFUNCTION()
 		void DeleteButtonClicked()
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Delete clicked."));
+		if (ParentPicker)
+		{
+			ParentPicker->ToggleDeleteMode();
+		}
 	}
+
+	UPROPERTY()
+	APaintingPicker* ParentPicker;
 };
