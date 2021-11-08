@@ -44,6 +44,8 @@ void APaintingPicker::RefreshSlots()
 	auto PaintingGridWidget = Cast<UPaintingGrid>(PaintingGrid->GetUserWidgetObject());
 	if (!PaintingGridWidget) return;
 
+	PaintingGridWidget->ClearPaintings();
+
 	int32 Index = 0;
 	for (auto& SlotNamse : UPainterSaveGameIndex::Load()->GetSlotNames())
 	{
@@ -61,7 +63,9 @@ void APaintingPicker::AddPainting()
 
 void APaintingPicker::ToggleDeleteMode()
 {
-	UE_LOG(LogTemp, Warning, TEXT("ToggleDeleteMode"));
+	auto PaintingGridWidget = Cast<UPaintingGrid>(PaintingGrid->GetUserWidgetObject());
+	if (!PaintingGridWidget) return;
 
+	PaintingGridWidget->ClearPaintings();
 }
 
