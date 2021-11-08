@@ -24,8 +24,8 @@ void UPaintingGrid::ClearPaintings()
 	for (int32 i = 0; i < PaintingGrid->GetChildrenCount(); ++i)
 	{
 		auto CardCointener = Cast<USizeBox>(PaintingGrid->GetChildAt(i));
-		if (!CardContainer) continue;
+		if (!CardCointener) continue;
 
-		CardContainer->ClearChildren();
+		CardCointener->ClearChildren();
 	}
 }
