@@ -29,7 +29,7 @@ private:
 
 	void Save();
 
-	void Load();
+
 
 	// Config
 	UPROPERTY(EditDefaultsOnly)

@@ -48,7 +48,6 @@ void AVRPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	PlayerInputComponent->BindAction(TEXT("RightTrigger"), EInputEvent::IE_Released, this, &AVRPawn::RightTriggerReleased);
 
 	PlayerInputComponent->BindAction(TEXT("Save"), EInputEvent::IE_Released, this, &AVRPawn::Save);
-	PlayerInputComponent->BindAction(TEXT("Load"), EInputEvent::IE_Released, this, &AVRPawn::Load);
 }
 
 void AVRPawn::Save()
@@ -62,16 +61,3 @@ void AVRPawn::Save()
 	}
 }
 
-void AVRPawn::Load()
-{
-	auto LoadGame = UPainterSaveGame::Load(CurrentSlotName);
-	if (LoadGame)
-	{
-		LoadGame->DeserializeToWorld(GetWorld());
-		UE_LOG(LogTemp, Warning, TEXT("Load State %s"), *LoadGame->GetState());
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Not Found "));
-	}
-}
