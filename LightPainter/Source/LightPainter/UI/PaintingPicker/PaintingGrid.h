@@ -26,6 +26,7 @@ public:
 
 	void AddPaginationDot(bool Active);
 
+	int32 GetNumberOfSlots() const;
 
 protected:
 

@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "PaintingGrid.h"
 #include "GameFramework/Actor.h"
 #include "Components/WidgetComponent.h"
 #include "PaintingPicker.generated.h"
@@ -26,6 +27,9 @@ protected:
 private:
 
 	void RefreshSlots();
+
+	int32 GetNumberOfPages() const;
+	UPaintingGrid* GetPaintingGrid() const { return Cast<UPaintingGrid>(PaintingGrid->GetUserWidgetObject()); }
 
 
 	UPROPERTY(VisibleAnywhere)
