@@ -3,8 +3,10 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "PaginationDot.h"
 #include "PaintingGridCard.h"
 #include "Blueprint/UserWidget.h"
+#include "Components/HorizontalBox.h"
 #include "Components/UniformGridPanel.h"
 #include "PaintingGrid.generated.h"
 
@@ -22,12 +24,23 @@ public:
 
 	void ClearPaintings();
 
+	void AddPaginationDot(bool Active);
+
+
 protected:
 
 	UPROPERTY(BlueprintReadOnly, VisibleAnywhere, meta = (BindWidget))
 	UUniformGridPanel* PaintingGrid;
+
+	UPROPERTY(BlueprintReadonly, VisibleAnywhere, meta = (BindWidget))
+	UHorizontalBox* PaginationDots;
 private:
 	UPROPERTY(EditDefaultsOnly)
-		TSubclassOf<UPaintingGridCard> GridCardClass;
+	TSubclassOf<UPaintingGridCard> GridCardClass;
 
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<UPaginationDot> PaginationDotClass;
+
+	UPROPERTY(EditDefaultsOnly)
+		float PaginationDotPadding = 8;
 };
