@@ -35,7 +35,7 @@ void APaintingPicker::BeginPlay()
 		PaintingActionBar->SetParentPicker(this);
 	}
 
-	RefreshSlots();
+	Refresh();
 
 }
 
@@ -46,9 +46,6 @@ void APaintingPicker::RefreshSlots()
 	auto PaintingGridWidget = GetPaintingGrid();
 	if (!PaintingGridWidget) return;
 
-	PaintingGridWidget->AddPaginationDot(true);
-	PaintingGridWidget->AddPaginationDot(false);
-	PaintingGridWidget->AddPaginationDot(false);
 	PaintingGridWidget->ClearPaintings();
 
 	int32 Index = 0;
@@ -56,6 +53,18 @@ void APaintingPicker::RefreshSlots()
 	{
 		PaintingGridWidget->AddPainting(Index, SlotNamse);
 		Index++;
+	}
+}
+
+void APaintingPicker::RefreshDots()
+{
+	if (!GetPaintingGrid()) return;
+
+	GetPaintingGrid()->ClearPaginationDots();
+
+	for (int32 i = 0; i < GetNumberOfPages(); ++i)
+	{
+		GetPaintingGrid()->AddPaginationDot(CurrentPage == i);
 	}
 }
 
@@ -73,7 +82,7 @@ void APaintingPicker::AddPainting()
 {
 	UPainterSaveGame::Create();
 
-	RefreshSlots();
+	Refresh();
 }
 
 void APaintingPicker::ToggleDeleteMode()
